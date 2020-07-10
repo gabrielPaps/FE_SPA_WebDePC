@@ -1,0 +1,83 @@
+header{
+    width: 100%;
+    background: #14181c;    
+    & nav{
+        width: 90%;
+        margin: 0 auto;    
+        padding: .5em 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        & .logo{
+            font-size: 1.5em;
+            cursor: pointer;
+            & a{
+                color: #fff;
+            }
+            & .btn-menu{
+                display: none;
+                font-size: 1em;
+                color: #fff;
+            }
+        }
+        & ul{
+            display: inline-block;
+            & li{
+                display: inline-block;
+                font-size: 1.1em;
+                font-family: 'Open Sans', sans-serif;
+                text-align: right;
+                a{
+                    height: 100%;
+                    display: inline-block;
+                    color: #fff;
+                    padding: 1em;
+                    text-align: center;
+                    transition: border-radius .7s ease;
+                    &:hover{
+                        background-color: #37424d;
+                        border-radius: 35%;
+                    }
+                }               
+            }            
+        }
+    }
+    @media screen and (max-width: 720px){
+        & nav{
+            flex-direction: column;
+            transition: ul .8s ease;
+            & .logo{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+                padding: 1em;
+                & .btn-menu{
+                    display: inline-block;
+                }
+            }
+            & .no-active{
+                display: none;
+            }
+            & .active{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                background-color: #5c6e80;
+                border-radius: 5%;
+            } & li{
+                text-align: center;
+                width: 100%;
+                & a{
+                    width: 100%;
+                    &:hover{
+                        border-radius: 5%;
+                    }
+                }
+            }
+        }
+    }
+}
